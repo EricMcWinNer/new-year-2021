@@ -1,0 +1,73 @@
+#illustration-home
+    display: flex
+    align-items: center
+    min-height: 100vh
+    width: 100vw
+    position: relative
+    .stars
+        width: 100%
+        height: 100%
+        position: absolute
+    #illustration
+        height: 80vh
+        max-height: 500px
+    #content
+        min-height: 100vh
+        flex: 1
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        animation: background 10s infinite 0s
+        h1
+            font-family: 'Poppins', sans-serif
+            font-size: 20vw
+            animation: foreground 20s linear 0s infinite
+            font-weight: bold
+            color: transparent
+            -webkit-text-fill-color: transparent
+            -webkit-text-stroke-width: 5px
+            -webkit-text-stroke-color: rgba(#fff, .8)
+
+            &::selection 
+                color: #d30000
+                background: 0 0
+                -webkit-text-stroke: 0
+                -webkit-text-fill-color: #fff
+
+            .fancy-stud-span::-moz-selection 
+                color: #d30000
+                background: 0 0
+                -webkit-text-stroke: 0
+                -webkit-text-fill-color: #fff
+            
+        h2
+            font-family: 'Poppins', sans-serif
+            color: rgba(#fff, .8)
+
+@keyframes background
+    0%
+        background-color:#1e2225
+    50%
+        background-color: #17182f
+    100%
+        background-color:#1e2225
+
+@keyframes foreground
+    0%
+        color:#1e2225
+    20%
+        color: #730cef
+    40%
+        color: #ff1b40
+    60%
+        color: #fd8844
+    80%
+        color: #4419ed
+    100%
+        color:#1e2225
+    
