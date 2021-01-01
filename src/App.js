@@ -7,6 +7,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact component={Home}></Route>
+        <Route path="/:nameParam" exact component={Home}></Route>
       </Switch>
     </Router>
   );

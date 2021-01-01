@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import confetti from "canvas-confetti";
 import Particles from "react-particles-js";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import "./index.sass";
 
 export default function Home(props) {
   const location = useLocation();
+  let { nameParam } = useParams();
   let name = new URLSearchParams(location.search).get("name");
   useEffect(() => {
     var duration = 15 * 1000;
@@ -72,7 +73,7 @@ export default function Home(props) {
     <div id="illustration-home">
       <div id="content">
         <h1>2021</h1>
-        <h2>Happy New Year{name && ` ${name}`}!</h2>
+        <h2>Happy New Year{nameParam ? ` ${nameParam}` : name && ` ${name}`}!</h2>
       </div>
       <Particles
         className="stars"
